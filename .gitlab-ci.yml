@@ -1,0 +1,19 @@
+jsonnet:
+  stage: build
+  image: alpine:latest
+  script:
+    - apk add -U jsonnet
+    - jsonnet -y gitlab-ci.jsonnet > generated-config.yml
+  artifacts:
+    paths:
+      - generated-config.yml
+
+generated-pipeline:
+  stage: test
+  needs:
+    - generate-config
+  trigger:
+    include:
+      - artifact: generated-config.yml
+        job: generate-config
+    strategy: depend
