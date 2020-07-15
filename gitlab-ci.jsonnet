@@ -1,5 +1,6 @@
 local param_job(script, parallel_count) =
   {
+    image: alpine:latest
     script: script,
     parallel: parallel_count,
     rules: [
@@ -9,7 +10,7 @@ local param_job(script, parallel_count) =
 
 [
   {
-    "rspec": param_job("my-script", 1),
-    "rspec 2": param_job("my-script-2", 1)
+    "rspec": param_job("echo Hello World", 2),
+    "rspec 2": param_job("echo Hello World 2", 2)
   }
 ]
