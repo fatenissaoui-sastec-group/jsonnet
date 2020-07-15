@@ -8,9 +8,7 @@ local param_job(script, parallel_count) =
     ]
   };
 
-[
-  {
-    "rspec": param_job("echo Hello World", 2),
-    "rspec 2": param_job("echo Hello World 2", 2)
-  }
-]
+{
+  "rspec": param_job("echo Hello World", 2),
+  "rspec 2": param_job("echo Hello World 2", 2)
+}
