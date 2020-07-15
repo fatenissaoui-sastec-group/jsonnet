@@ -11,9 +11,9 @@ jsonnet:
 generated-pipeline:
   stage: test
   needs:
-    - generate-config
+    - jsonnet
   trigger:
     include:
       - artifact: generated-config.yml
-        job: generate-config
+        job: jsonnet
     strategy: depend
