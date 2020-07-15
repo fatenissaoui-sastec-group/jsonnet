@@ -1,6 +1,6 @@
 local param_job(script, parallel_count) =
   {
-    image: alpine:latest
+    image: "alpine:latest",
     script: script,
     parallel: parallel_count,
     rules: [
