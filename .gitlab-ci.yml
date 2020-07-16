@@ -8,7 +8,7 @@ jsonnet:
     paths:
       - generated-config.yml
 
-generated-pipeline:
+trigger-tests:
   stage: test
   needs:
     - jsonnet
