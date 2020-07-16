@@ -2,7 +2,7 @@
 
 This project template serves as a starting point to use GitLab CI [Dynamic Child Pipelines](https://docs.gitlab.com/ee/ci/parent_child_pipelines.html#dynamic-child-pipelines) with [Jsonnet](https://jsonnet.org/) to generate complex `gitlab-ci.yml` files at runtime.
 
-Jsonnet provides functions, variables, loops, and conditionals that can allow to create fully paramaterized YAML configuration.
+Jsonnet provides functions, variables, loops, and conditionals that allow for fully paramaterized YAML configuration.
 
 # Components
 
